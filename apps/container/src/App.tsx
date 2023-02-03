@@ -26,7 +26,7 @@ export const App = () => {
   }, [setQuotations]);
   return (
     <div>
-      <h1>Hello Container Application</h1>
+      <h1 className="text-xl font-bold m-8">Hello Container Application</h1>
       <RouterProvider router={router} />
     </div>
   );

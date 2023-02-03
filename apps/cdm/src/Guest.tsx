@@ -43,22 +43,38 @@ export const Guest = () => {
 
   return (
     <div>
-      <h1>Hello CDM application</h1>
+      <h1 className="text-xl font-bold m-8">Hello CDM application</h1>
       <div
+        className="m-4 border border-gray-200 rounded-lg shadow"
         style={{
           display: "flex",
           flexDirection: "column",
-          border: "solid black 2px",
           padding: "8px",
-          width: "300px",
+          width: "400px",
         }}
       >
-        <h2>Guest from CDM</h2>
-        <span>First Name: {guest?.firstName}</span>
-        <span>Last Name: {guest?.lastName}</span>
-        <span>Email: {guest?.email}</span>
+        <h2 className="text-lg font-bold m-8">Guest from CDM</h2>
+        <p className="w-full mb-1 text-xl font-medium text-gray-900 dark:text-white ">
+          First Name:
+          <span className="text-sm text-gray-500 dark:text-gray-400 ml-8">
+            {guest?.firstName}
+          </span>
+        </p>
+        <p className="w-full mb-1 text-xl font-medium text-gray-900 dark:text-white">
+          Last Name:
+          <span className="text-sm text-gray-500 dark:text-gray-400 ml-8">
+            {guest?.lastName}
+          </span>
+        </p>
+        <p className="w-full mb-1 text-xl font-medium text-gray-900 dark:text-white">
+          Email:
+          <span className="text-sm text-gray-500 dark:text-gray-400 ml-8">
+            {guest?.email}
+          </span>
+        </p>
         <div style={{ marginTop: "18px" }}>
           <input
+            className="p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             type="text"
             value={searchName}
             name="search"
@@ -66,7 +82,12 @@ export const Guest = () => {
               setSearchName(e.target.value)
             }
           />
-          <button onClick={onSearch}>Search</button>
+          <button
+            onClick={onSearch}
+            className="ml-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Search
+          </button>
         </div>
         <div
           style={{

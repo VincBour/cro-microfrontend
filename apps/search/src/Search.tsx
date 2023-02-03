@@ -23,16 +23,22 @@ export const Search = () => {
 
   return (
     <div>
-      <h1>Hello Search Application</h1>
+      <h1 className="text-xl font-bold m-8">Hello Search Application</h1>
       <div
+        className="m-4 border border-gray-200 rounded-lg shadow"
         style={{
           display: "flex",
           flexDirection: "column",
-          border: "solid black 2px",
           padding: "8px",
           width: "300px",
         }}
       >
+        <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+          <span className="font-medium text-gray-600 dark:text-gray-300">
+            {guest?.firstName[0].toUpperCase()}
+            {guest?.lastName[0].toUpperCase()}
+          </span>
+        </div>
         <InputField
           label="First Name:"
           name={"firstName"}
